@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom"
 import "../Header/Header.css"
-function Header() {
+function Header(props) {
     const [menuOpen, setMenuOpen] = useState(false)
     const [matches, setMatches] = useState(
         window.matchMedia("(min-width: 951px)").matches
@@ -11,12 +11,16 @@ function Header() {
         window.matchMedia("(min-width: 951px)").addEventListener('change', e => setMatches(e.matches));
     }, []);
 
-    let links = <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-    </ul>
+    let links = props.backButton ?
+        <ul>
+            <li><a className="nav__link" href="/#work">back</a></li>
+        </ul> :
+        <ul>
+            <li><a className="nav__link" href="#home">Home</a></li>
+            <li><a className="nav__link" href="#services">Services</a></li>
+            <li><a className="nav__link" href="#about">About</a></li>
+            <li><a className="nav__link" href="#work">Work</a></li>
+        </ul>
 
     return (
         <header>
@@ -29,7 +33,7 @@ function Header() {
                         setMenuOpen(prev => {
                             return !prev
                         })
-                    }} className="menu-button">Open</button>
+                    }} className="menu-button nav-toggle ">  <span class="hamburger"></span> </button>
                 </div>
                 <nav className="nav-2" style={menuOpen && !matches ? { display: "flex" } : { display: "none" }}>
                     {links}
