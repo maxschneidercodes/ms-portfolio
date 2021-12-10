@@ -1,4 +1,3 @@
-import './App.css';
 import Header from "./Components/Header/Header"
 import Projects from './Components/Projects/Project';
 import { Routes, Route } from 'react-router';
@@ -10,7 +9,7 @@ import Item from './Components/Projects/Item/Item';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Routes>
         <Route exact path="/" element={
           <div>

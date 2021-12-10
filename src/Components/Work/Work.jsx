@@ -1,22 +1,109 @@
+import { faCode, faCodeBranch, faStream } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faReact, faHtml5, faJs, faCss3, faNode, faSass, faSwift, faNpm, faBootstrap, faGitAlt } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 function Work() {
     return (
-        <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What I do</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Development</h3>
-                    <p></p>
+        <section className="my-services" id="services">
+            <h2 className="section__title section__title--services">My Tech Stack </h2>
+            <div className="services">
+
+                <div className="service">
+                    <div className="techstack-title">
+                        <FontAwesomeIcon icon={faCodeBranch} color="#e0b816" size="2x" />
+                        <h3>Development</h3>
+                    </div>
+                    <ul className="techstack-ul">
+                        <li>
+                            <FontAwesomeIcon icon={faGithub} size="2x" />
+                            <div>
+                                Github
+                            </div>
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faGitAlt} size="2x" />
+                            <div>
+                                git
+                            </div>
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faNpm} size="2x" />
+                            <div>
+                                npm
+                            </div>
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faBootstrap} size="2x" />
+                            <div>
+                                Bootstrap
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="service">
-                    <h3>E-Commerce</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                <div className="service">
+                    <div className="techstack-title">
+                        <FontAwesomeIcon icon={faCode} color="#e0b816" size="2x" />
+                        <h3>Markup</h3>
+                    </div>
+                    <ul className="techstack-ul">
+                        <li>
+                            <FontAwesomeIcon icon={faHtml5} size="2x" />
+                            <div>
+                                HTML
+                            </div>
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faCss3} size="2x" />
+                            <div>
+                                CSS
+                            </div>
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faSass} size="2x" />
+                            <div>
+                                Sass
+                            </div>
+                        </li>
+                    </ul>
+
                 </div>
-                <div class="service">
-                    <h3>WordPress</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                <div className="service">
+                    <div className="techstack-title">
+                        <FontAwesomeIcon icon={faStream} color="#e0b816" size="2x" />
+                        <h3>Programming</h3>
+                    </div>
+
+                    <ul className="techstack-ul">
+                        <li>
+                            <FontAwesomeIcon icon={faJs} size="2x" />
+                            <div>
+                                Javascript
+                            </div>
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faReact} size="2x" />
+                            <div>
+                                React
+                            </div>
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faNode} size="2x" />
+                            <div>
+                                Nodejs
+                            </div>
+                        </li>
+                        <li>
+                            <FontAwesomeIcon icon={faSwift} size="2x" />
+                            <div>
+                                Swift
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <a href="#work" class="btn">My Work</a>
+            <a href="#work" className="btn">My Work</a>
         </section>
     )
 }
