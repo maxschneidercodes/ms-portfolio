@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom"
-import "../Header/Header.css"
+
 function Header(props) {
     const [menuOpen, setMenuOpen] = useState(false)
     const [matches, setMatches] = useState(
@@ -14,13 +14,13 @@ function Header(props) {
     let links = props.backButton ?
         <ul>
             <li><a className="nav__link" href="/#home">Home</a></li>
-            <li><a className="nav__link" href="/#services">Services</a></li>
+            <li><a className="nav__link" href="/#services">Tech-Stack</a></li>
             <li><a className="nav__link" href="/#about">About</a></li>
             <li><a className="nav__link" href="/#work">Work</a></li>
         </ul> :
         <ul>
             <li><a className="nav__link" href="#home">Home</a></li>
-            <li><a className="nav__link" href="#services">Services</a></li>
+            <li><a className="nav__link" href="#services">Tech-Stack</a></li>
             <li><a className="nav__link" href="#about">About</a></li>
             <li><a className="nav__link" href="#work">Work</a></li>
         </ul>

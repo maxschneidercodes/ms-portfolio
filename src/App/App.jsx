@@ -1,11 +1,11 @@
-import Header from "./Components/Header/Header"
-import Projects from './Components/Projects/Project';
+import Header from "../Components/Header/Header"
+import Projects from '../Components/Projects/Project';
 import { Routes, Route } from 'react-router';
-import Intro from './Components/Intro/Intro';
-import Work from './Components/Work/Work';
-import About from './Components/About/About';
-import Footer from './Components/Footer/Footer';
-import Item from './Components/Projects/Item/Item';
+import Intro from '../Components/Intro/Intro';
+import Work from '../Components/Work/Work';
+import About from '../Components/About/About';
+import Footer from '../Components/Footer/Footer';
+import Item from '../Components/Projects/Item/Item';
 
 function App() {
   return (

@@ -10,7 +10,7 @@ function Work() {
 
                 <div className="service">
                     <div className="techstack-title">
-                        <FontAwesomeIcon icon={faCodeBranch} color="#e0b816" size="2x" />
+                        <FontAwesomeIcon icon={faCodeBranch} size="2x" />
                         <h3>Development</h3>
                     </div>
                     <ul className="techstack-ul">
@@ -43,7 +43,7 @@ function Work() {
 
                 <div className="service">
                     <div className="techstack-title">
-                        <FontAwesomeIcon icon={faCode} color="#e0b816" size="2x" />
+                        <FontAwesomeIcon icon={faCode} size="2x" />
                         <h3>Markup</h3>
                     </div>
                     <ul className="techstack-ul">
@@ -71,7 +71,7 @@ function Work() {
 
                 <div className="service">
                     <div className="techstack-title">
-                        <FontAwesomeIcon icon={faStream} color="#e0b816" size="2x" />
+                        <FontAwesomeIcon icon={faStream} size="2x" />
                         <h3>Programming</h3>
                     </div>
 
