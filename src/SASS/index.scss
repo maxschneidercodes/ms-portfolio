@@ -1,5 +1,5 @@
-@import './SASS/vars';
-@import './SASS/mixins';
+@import './vars';
+@import './mixins';
 *,
 *::before,
 *::after {
@@ -23,7 +23,7 @@ body {
 }
 
 section {
-    padding: 5em 2em;
+    padding: 5rem 2rem;
 }
 
 img {
@@ -192,6 +192,10 @@ h3 {
     position: relative;
 }
 
+.intro-container {
+    @include flexCenterWithDirection(column);
+}
+
 .intro__img {
     box-shadow: $bs;
 }
@@ -222,7 +226,7 @@ h3 {
         text-align: right;
         position: relative;
         left: -1.5em;
-        width: calc(100% + 1.5em);
+        width: calc(100% + 3.5em);
     }
 }
 
@@ -317,6 +321,11 @@ h3 {
     text-align: center;
 }
 
+.portfolio-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
 .portfolio {
     display: grid;
     grid-gap: 2rem;
@@ -348,10 +357,10 @@ h3 {
 /* footer */
 
 .footer {
-    background: #111;
-    color: $clr-accent;
+    background-color: $clr-dark;
+    color: $clr-light;
     text-align: center;
-    padding: 2.5em 0;
+    padding: 5.5em 0;
     font-size: $fs-h3;
 }
 
@@ -403,7 +412,12 @@ h3 {
     margin-right: auto;
 }
 
+.techstack-maintitle {
+    padding-bottom: 1rem;
+}
+
 .techstack-title {
+    color: $clr-accent;
     h3 {
         padding-top: 1rem;
     }
@@ -425,6 +439,7 @@ h3 {
     align-items: center;
     padding: 0;
     padding-top: 1.5rem;
+    margin-bottom: 3rem;
     li {
         display: flex;
         padding-bottom: 1.5rem;
@@ -473,7 +488,7 @@ nav ul {
 }
 
 nav li {
-    margin-left: 3.5em;
+    margin-left: 3.5rem;
 }
 
 nav li:first-child {
@@ -498,6 +513,11 @@ nav li a {
 
 .site-title {
     @include flexCenter();
+}
+
+.footer-container {
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 
@@ -528,7 +548,6 @@ Class Selectors
     display: none;
     cursor: pointer;
     border: 0;
-    margin-left: 1rem;
 }
 
 
@@ -539,6 +558,9 @@ Media Querys
 */
 
 @media (max-width:950px) {
+    .about-me {
+        @include flexCenterWithDirection(column);
+    }
     header {
         text-align: center;
     }

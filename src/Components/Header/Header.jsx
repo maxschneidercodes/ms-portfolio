@@ -17,12 +17,14 @@ function Header(props) {
             <li><a className="nav__link" href="/#services">Tech-Stack</a></li>
             <li><a className="nav__link" href="/#about">About</a></li>
             <li><a className="nav__link" href="/#work">Work</a></li>
+            <li><a className="nav__link" href="/#contact">Work</a></li>
         </ul> :
         <ul>
             <li><a className="nav__link" href="#home">Home</a></li>
             <li><a className="nav__link" href="#services">Tech-Stack</a></li>
             <li><a className="nav__link" href="#about">About</a></li>
             <li><a className="nav__link" href="#work">Work</a></li>
+            <li><a className="nav__link" href="#contact">Contact</a></li>
         </ul>
 
     return (

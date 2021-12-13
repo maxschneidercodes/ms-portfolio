@@ -14,8 +14,11 @@ function Projects() {
         <section class="my-work" id="work">
             <h2 class="section__title section__title--work">My work</h2>
             <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
-            <div class="portfolio">
-                {data}
+            <div className="portfolio-container">
+
+                <div class="portfolio">
+                    {data}
+                </div>
             </div>
         </section>
     )

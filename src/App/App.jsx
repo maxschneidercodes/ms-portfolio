@@ -18,6 +18,7 @@ function App() {
             <Work />
             <About />
             <Projects />
+            <Footer color1="#fff" color2="#333" />
           </div>
         }>
         </Route>
@@ -25,11 +26,11 @@ function App() {
           <div>
             <Header backButton={true} />
             <Item />
+            <Footer color1="#0c192f" color2="#fff" />
           </div>
         }>
         </Route>
       </Routes>
-      <Footer />
     </div>
   );
 }

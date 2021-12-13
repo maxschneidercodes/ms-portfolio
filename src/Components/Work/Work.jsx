@@ -5,10 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function Work() {
     return (
         <section className="my-services" id="services">
-            <h2 className="section__title section__title--services">My Tech Stack </h2>
+            <h2 className="techstack-maintitle section__title section__title--services">My Tech Stack </h2>
             <div className="services">
-
-                <div className="service">
+                <div className="work-container service">
                     <div className="techstack-title">
                         <FontAwesomeIcon icon={faCodeBranch} size="2x" />
                         <h3>Development</h3>
