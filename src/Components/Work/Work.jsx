@@ -84,13 +84,13 @@ function Work() {
                         <li>
                             <FontAwesomeIcon icon={faReact} size="2x" />
                             <div>
-                                React
+                                React.js
                             </div>
                         </li>
                         <li>
                             <FontAwesomeIcon icon={faNode} size="2x" />
                             <div>
-                                Nodejs
+                                Node.js
                             </div>
                         </li>
                         <li>

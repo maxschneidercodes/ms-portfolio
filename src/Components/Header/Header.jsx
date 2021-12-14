@@ -29,7 +29,7 @@ function Header(props) {
 
     return (
         <header>
-            <div class="container">
+            <div className="container">
                 <div className="container-nav">
                     <nav className="nav">
                         {links}
@@ -38,7 +38,7 @@ function Header(props) {
                         setMenuOpen(prev => {
                             return !prev
                         })
-                    }} className="menu-button nav-toggle ">  <span class="hamburger"></span> </button>
+                    }} className="menu-button nav-toggle ">  <span className="hamburger"></span> </button>
                 </div>
                 <nav className="nav-2" style={menuOpen && !matches ? { display: "flex" } : { display: "none" }}>
                     {links}
