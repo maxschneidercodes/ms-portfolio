@@ -3,7 +3,22 @@ import img2 from "../../Images/work2.png"
 import img3 from "../../Images/work3.png"
 
 const projectData = {
-    filterData: ["ALL", "React.js", "Website"],
+    filterData: [{
+            icon: "All",
+            type: "ALL",
+        }, {
+            icon: "Unity",
+            type: "Unity",
+        },
+        {
+            icon: "Swift",
+            type: "Swift",
+        },
+        {
+            icon: "React",
+            type: "React.js",
+        },
+    ],
     projects: [{
             id: "1",
             link: "https://picsome-maxschneidercodes.netlify.app",

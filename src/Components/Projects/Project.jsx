@@ -1,6 +1,11 @@
 import projectData from "../Data/ProjectData"
 import { useState } from "react"
 import { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faReact, faSwift, faUnity } from '@fortawesome/free-brands-svg-icons'
+import { faListAlt } from "@fortawesome/free-solid-svg-icons";
+
+
 function Projects() {
     const [filterSelected, setFilter] = useState("ALL");
     const [filterData, setFilterData] = useState([]);
@@ -23,17 +28,28 @@ function Projects() {
             setFilterData(allData)
         } else {
             setFilterData(allData.filter(item => {
-                console.log(filterSelected)
                 return item.props.name === filterSelected
             }))
         }
     }, [filterSelected, allData])
 
     const types = projectData.filterData.map((item, index) => {
-        return <button key={index} id={index} onClick={() => {
-            setFilter(projectData.filterData[index])
-        }} className={`btn2 ${projectData.filterData[index] === filterSelected ? "btn-selected " : ""}`}> {projectData.filterData[index]}</button >
-
+        let icon;
+        if (item.icon === "Unity") {
+            icon = faUnity
+        } else if (item.icon === "Swift") {
+            icon = faSwift
+        } else if (item.icon === "React") {
+            icon = faReact
+        } else {
+            icon = faListAlt
+        }
+        return <div >
+            <button key={index} id={index} onClick={() => {
+                setFilter(projectData.filterData[index].type)
+            }} className={`btn2 ${projectData.filterData[index].type === filterSelected ? "btn-selected " : ""}`}>
+                <FontAwesomeIcon icon={icon} size="2x" /> {projectData.filterData[index].type}</button >
+        </div>
     })
 
     return (
@@ -41,7 +57,9 @@ function Projects() {
             <h2 className="section__title section__title--work">My work</h2>
             <p className="section__subtitle section__subtitle--work">A selection of my range of work</p>
             <div className="portfolio-container">
-                {types}
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row" }}>
+                    {types}
+                </div>
                 <div className="portfolio">
                     {filterData}
                 </div>
