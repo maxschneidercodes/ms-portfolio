@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact, faSwift, faUnity } from '@fortawesome/free-brands-svg-icons'
 import { faListAlt } from "@fortawesome/free-solid-svg-icons";
 
-
 function Projects() {
     const [filterSelected, setFilter] = useState("ALL");
     const [filterData, setFilterData] = useState([]);
@@ -48,7 +47,7 @@ function Projects() {
             <button key={index} id={index} onClick={() => {
                 setFilter(projectData.filterData[index].type)
             }} className={`btn2 ${projectData.filterData[index].type === filterSelected ? "btn-selected " : ""}`}>
-                <FontAwesomeIcon icon={icon} size="2x" /> {projectData.filterData[index].type}</button >
+                <FontAwesomeIcon icon={icon} size="2x" style={{ marginRight: ".5rem" }} /> {projectData.filterData[index].type}</button >
         </div>
     })
 
@@ -57,7 +56,7 @@ function Projects() {
             <h2 className="section__title section__title--work">My work</h2>
             <p className="section__subtitle section__subtitle--work">A selection of my range of work</p>
             <div className="portfolio-container">
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row" }}>
+                <div className="btn-container">
                     {types}
                 </div>
                 <div className="portfolio">
