@@ -401,6 +401,33 @@ h3 {
   opacity: .7;
 }
 
+.portfolio2 {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfolio__img2 {
+  margin: 1rem;
+  border-radius: 11px;
+  -webkit-transition: -webkit-transform 350ms;
+  transition: -webkit-transform 350ms;
+  transition: transform 350ms;
+  transition: transform 350ms, -webkit-transform 350ms;
+}
+
+.portfolio__img2:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 /* footer */
 .footer {
   background-color: #0c192f;

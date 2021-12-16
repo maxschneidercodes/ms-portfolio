@@ -360,6 +360,24 @@ h3 {
     opacity: .7;
 }
 
+.portfolio2 {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio__img2 {
+    margin: 1rem;
+    border-radius: 11px;
+    transition: transform 350ms;
+}
+
+.portfolio__img2:hover {
+    transform: scale(1.1);
+}
+
 
 /* footer */
 
