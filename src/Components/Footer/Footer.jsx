@@ -1,9 +1,9 @@
-function Footer(props) {
+function Footer() {
     return (
-        <footer className="footer " style={{ backgroundColor: props.color1 }} id="contact">
-            <div style={{ color: props.color2 }} className="footer-container">
-                <h2>Get In Touch</h2>
-                <a style={{ margin: "2rem", color: props.color2 }} href="mailto:maxschneidercodes@gmail.com" className="btn">Say Hello</a>
+        <footer className="footer" id="contact">
+            <div style={{ margin: "2rem" }}>
+                <a style={{ fontSize: "1.5rem" }} href="/imprint">Imprint</a>
+                <p style={{ fontSize: ".9rem", margin: "2rem" }}>© Max Schneider 2021 </p>
             </div>
         </footer>
     )

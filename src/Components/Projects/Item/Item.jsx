@@ -10,22 +10,19 @@ function Item() {
             <img style={{ maxWidth: "300px", margin: "1rem" }} className="portfolio__img2" src={items.imgs[index]} alt="" />
         </div>
     })
-    console.log(imgs)
-
     return (
         <div style={{ marginBottom: "7rem", marginTop: "7rem" }}>
             <section className="intro">
                 <h1 className="section__title section__title--intro">
                     <strong>{items.title}</strong>
                 </h1>
-                <a className="section__subtitle section__subtitle--intro" style={{ fontSize: "1.3rem" }} href={items.link}>  {items.link} </a>
+                <a className="section__subtitle section__subtitle--intro" style={{ fontSize: "1.5rem" }} href={items.link}> {items.link ? "Test It" : ""}</a>
                 <img src={items.img} alt="" className="intro__img" />
             </section>
             <div className="portfolio2">
                 {imgs}
             </div>
         </div>
-
     )
 }
 

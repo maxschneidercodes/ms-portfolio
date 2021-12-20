@@ -131,8 +131,15 @@ h3 {
   font-size: 1.25rem;
 }
 
-.section__subtitle--intro,
+.section__subtitle--intro {
+  background: #63e7cb;
+  padding: .25em 1em;
+  font-family: "Source Code Pro", monospace;
+  margin-bottom: 1em;
+}
+
 .section__subtitle--about {
+  border-radius: 11px;
   background: #63e7cb;
   padding: .25em 1em;
   font-family: "Source Code Pro", monospace;
@@ -348,6 +355,7 @@ h3 {
 }
 
 .about-me__img {
+  border-radius: 11px;
   -webkit-box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
           box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
@@ -396,9 +404,9 @@ h3 {
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  opacity: .7;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: .8;
 }
 
 .portfolio2 {
@@ -778,6 +786,7 @@ Media Querys
     padding-right: calc(200px + 4em);
   }
   .about-me__img {
+    border-radius: 11px;
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 2;

@@ -6,6 +6,13 @@ import img5 from "../../Images/ShipFlipp3D/300x300bb.png"
 import img6 from "../../Images/Math Miner/300x300bb.png"
 import img7 from "../../Images/Pixel Objects Quiz/300x300bb.png"
 
+
+import shipflip1 from "../../Images/ShipFlipp3D/1242x2688bb-1.png"
+import shipflip2 from "../../Images/ShipFlipp3D/1242x2688bb-2.png"
+import shipflip3 from "../../Images/ShipFlipp3D/1242x2688bb-3.png"
+import shipflip4 from "../../Images/ShipFlipp3D/1242x2688bb-4.png"
+import shipflip5 from "../../Images/ShipFlipp3D/1242x2688bb.png"
+
 import cityblast1 from "../../Images/CityBlastIcons/1242x2688bb-1.png"
 import cityblast2 from "../../Images/CityBlastIcons/1242x2688bb-2.png"
 import cityblast3 from "../../Images/CityBlastIcons/1242x2688bb-3.png"
@@ -15,6 +22,15 @@ import cityblast6 from "../../Images/CityBlastIcons/1242x2688bb-6.png"
 import cityblast7 from "../../Images/CityBlastIcons/1242x2688bb-7.png"
 import cityblast8 from "../../Images/CityBlastIcons/1242x2688bb-8.png"
 import cityblast9 from "../../Images/CityBlastIcons/1242x2688bb.png"
+
+import mathminer1 from "../../Images/Math Miner/1242x2208bb-1.png"
+import mathminer2 from "../../Images/Math Miner/1242x2208bb-2.png"
+import mathminer3 from "../../Images/Math Miner/1242x2208bb-3.png"
+
+import pixel1 from "../../Images/Pixel Objects Quiz/1242x2688bb-1.png"
+import pixel2 from "../../Images/Pixel Objects Quiz/1242x2688bb-2.png"
+import pixel3 from "../../Images/Pixel Objects Quiz/1242x2688bb.png"
+
 
 
 const projectData = {
@@ -79,7 +95,7 @@ const projectData = {
             text: "",
             type: "Unity",
             img: img5,
-            imgs: []
+            imgs: [shipflip1, shipflip2, shipflip3, shipflip4, shipflip5]
         },
         {
             id: "6",
@@ -88,7 +104,7 @@ const projectData = {
             text: "",
             type: "Swift",
             img: img6,
-            imgs: []
+            imgs: [mathminer1, mathminer2, mathminer3]
         },
         {
             id: "7",
@@ -97,7 +113,7 @@ const projectData = {
             text: "",
             type: "Swift",
             img: img7,
-            imgs: [],
+            imgs: [pixel1, pixel2, pixel3],
         }
     ]
 }

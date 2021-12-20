@@ -6,11 +6,13 @@ import Work from '../Components/Work/Work';
 import About from '../Components/About/About';
 import Footer from '../Components/Footer/Footer';
 import Item from '../Components/Projects/Item/Item';
-
+import Imprint from "../Components/Imprint"
+import Contact from "../Components/Contact";
 function App() {
   return (
     <div>
       <Routes>
+
         <Route exact path="/" element={
           <div>
             <Header backButton={false} />
@@ -18,7 +20,8 @@ function App() {
             <Work />
             <About />
             <Projects />
-            <Footer color1="#fff" color2="#333" />
+            <Contact color1="#fff" color2="#333" />
+            <Footer />
           </div>
         }>
         </Route>
@@ -26,7 +29,15 @@ function App() {
           <div>
             <Header backButton={true} />
             <Item />
-            <Footer color1="#0c192f" color2="#fff" />
+            <Footer />
+          </div>
+        }>
+        </Route>
+        <Route path="/imprint" element={
+          <div className="container">
+            <Header backButton={true} />
+            <Imprint />
+            <Footer />
           </div>
         }>
         </Route>
