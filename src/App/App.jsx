@@ -12,14 +12,13 @@ function App() {
   return (
     <div>
       <Routes>
-
         <Route exact path="/" element={
           <div>
             <Header backButton={false} />
             <Intro />
-            <Work />
-            <About />
             <Projects />
+            <About />
+            <Work />
             <Contact color1="#fff" color2="#333" />
             <Footer />
           </div>

@@ -102,7 +102,6 @@ function Work() {
                     </ul>
                 </div>
             </div>
-            <a href="#work" className="btn">My Work</a>
         </section>
     )
 }

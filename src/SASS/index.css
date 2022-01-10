@@ -326,10 +326,6 @@ h3 {
   opacity: 0.25;
 }
 
-.services {
-  margin-bottom: 4em;
-}
-
 .service {
   max-width: 500px;
   margin: 0 auto;
@@ -754,12 +750,19 @@ Media Querys
           flex-direction: column;
 }
 
+.btn2 {
+  margin-right: 0;
+}
+
 @media (min-width: 600px) {
   .btn-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .btn2 {
+    margin-right: 2rem;
   }
   .about-me {
     display: -ms-grid;

@@ -1,4 +1,4 @@
-import img from "../../Images/Download.jpeg"
+import img from "../../Images/profile2.jpg"
 function Intro() {
     return (
         <section className="intro-container intro" id="home">

@@ -53,7 +53,7 @@ function Projects() {
 
     return (
         <section className="my-work" id="work">
-            <h2 className="section__title section__title--work">My work</h2>
+            <h2 className="section__title section__title--work">My projects</h2>
             <p className="section__subtitle section__subtitle--work">A selection of my range of work</p>
             <div className="portfolio-container">
                 <div className="btn-container">
@@ -63,6 +63,7 @@ function Projects() {
                     {filterData}
                 </div>
             </div>
+            <a href="#services" style={{ marginTop: "3.5rem" }} className="btn">My Tech-Stack</a>
         </section>
     )
 }
