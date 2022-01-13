@@ -15,15 +15,13 @@ function Header(props) {
             <li><a className="nav__link" href="/#home">Home</a></li>
             <li><a className="nav__link" href="/#work">Projects</a></li>
             <li><a className="nav__link" href="/#about">About</a></li>
-            <li><a className="nav__link" href="/#services">Tech-Stack</a></li>
-            <li><a className="nav__link" href="/#contact">Work</a></li>
+            <li><a href="mailto:maxschneidercodes@gmail.com" className="btn3" >Say Hello! 👋</a></li>
         </ul> :
         <ul>
             <li><a className="nav__link" href="#home">Home</a></li>
             <li><a className="nav__link" href="#work">Projects</a></li>
             <li><a className="nav__link" href="#about">About</a></li>
-            <li><a className="nav__link" href="#services">Tech-Stack</a></li>
-            <li><a className="nav__link" href="#contact">Contact</a></li>
+            <li><a href="mailto:maxschneidercodes@gmail.com" className="btn3" >Say Hello! 👋</a></li>
         </ul>
 
     return (

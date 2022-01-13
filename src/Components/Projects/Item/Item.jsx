@@ -1,6 +1,8 @@
 import { useParams } from "react-router";
 import projectData from "../../Data/ProjectData"
-
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function Item() {
     const { id } = useParams()
     const items = projectData.projects.find(item => item.id === id)
@@ -16,10 +18,27 @@ function Item() {
                 <h1 className="section__title section__title--intro">
                     <strong>{items.title}</strong>
                 </h1>
-                <a className="section__subtitle section__subtitle--intro" style={{ fontSize: "1.5rem" }} href={items.link}> {items.link ? "Test It" : ""}</a>
+
+                <p className="section__subtitle section__subtitle--intro" style={{ fontSize: "1.5rem" }}></p>
+
                 <img src={items.img} alt="" className="intro__img" />
             </section>
+
             <div className="portfolio2">
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                    {
+                        items.githubLink ? <div style={{ color: "#0c192f", border: "solid 3px #0c192f", borderRadius: 11, padding: ".5rem 1rem" }}>
+                            <FontAwesomeIcon icon={faGithub} size="2x" />
+                            <a style={{ color: "#0c192f", marginLeft: "1rem", fontSize: "1.5rem" }} href={items.githubLink}>Github</a>
+                        </div> : null
+                    }
+                    {
+                        items.link ? <div style={{ color: "#0c192f", border: "solid 3px #0c192f", borderRadius: 11, marginLeft: "2rem", padding: ".5rem 1rem" }}>
+                            <FontAwesomeIcon icon={faPlay} size="2x" />
+                            <a style={{ color: "#0c192f", marginLeft: "1rem", fontSize: "1.5rem" }} href={items.link}>Start</a>
+                        </div> : null
+                    }
+                </div>
                 {imgs}
             </div>
         </div>

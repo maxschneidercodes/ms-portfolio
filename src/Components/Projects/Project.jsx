@@ -63,7 +63,6 @@ function Projects() {
                     {filterData}
                 </div>
             </div>
-            <a href="#services" style={{ marginTop: "3.5rem" }} className="btn">My Tech-Stack</a>
         </section>
     )
 }
