@@ -2,7 +2,7 @@ import projectData from "../Data/ProjectData"
 import { useState } from "react"
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact, faSwift, faUnity, faNode, faJs } from '@fortawesome/free-brands-svg-icons'
+import { faReact, faSwift, faUnity, faNode, faJs, } from '@fortawesome/free-brands-svg-icons'
 import { faListAlt, faDatabase, faCode } from "@fortawesome/free-solid-svg-icons";
 
 function Projects() {
@@ -39,43 +39,39 @@ function Projects() {
         }
     }, [filterSelected, allData])
 
-    const programmingLanguagesButtons = projectData.language.map((item, index) => {
-        let icon;
-
-        switch (item.icon) {
+    function getIcon(iconString) {
+        let icon
+        switch (iconString) {
             case "Swift":
                 icon = faSwift
                 break;
             case "JavaScript":
                 icon = faJs
                 break;
+            case "React":
+                icon = faReact
+                break;
+            case "Node.js":
+                icon = faNode
+                break;
             default:
                 icon = null
         }
+        return icon
+    }
 
+    const programmingLanguagesButtons = projectData.language.map((item, index) => {
         return <div >
             <button key={index} id={index} onClick={() => {
                 setFilter(filter => {
                     return projectData.language[index].type
                 })
             }} className={`btn2 ${projectData.language[index].type === filterSelected ? "btn-selected " : ""}`}>
-                <FontAwesomeIcon icon={icon} size="2x" style={{ marginRight: ".5rem" }} /> {projectData.language[index].type}</button >
+                <FontAwesomeIcon icon={getIcon(item.icon)} size="2x" style={{ marginRight: ".5rem" }} /> {projectData.language[index].type}</button >
         </div>
     })
 
     const frameworkButton = projectData.framework.map((item, index) => {
-        let icon;
-
-        switch (item.icon) {
-            case "Unity":
-                icon = faUnity
-                break;
-            case "React.js":
-                icon = faReact
-                break;
-            default:
-                icon = null
-        }
 
         return <div >
             <button key={index} id={index} onClick={() => {
@@ -83,31 +79,18 @@ function Projects() {
                     return projectData.framework[index].type
                 })
             }} className={`btn2 ${projectData.framework[index].type === filterSelected ? "btn-selected " : ""}`}>
-                <FontAwesomeIcon icon={icon} size="2x" style={{ marginRight: ".5rem" }} /> {projectData.framework[index].type}</button >
+                <FontAwesomeIcon icon={getIcon(item.icon)} size="2x" style={{ marginRight: ".5rem" }} /> {projectData.framework[index].type}</button >
         </div>
     })
 
     const databaseButton = projectData.dataBase.map((item, index) => {
-        let icon;
-
-        switch (item.icon) {
-            case "Unity":
-                icon = faUnity
-                break;
-            case "React.js":
-                icon = faReact
-                break;
-            default:
-                icon = null
-        }
-
         return <div >
             <button key={index} id={index} onClick={() => {
                 setFilter(filter => {
                     return projectData.dataBase[index].type
                 })
             }} className={`btn2 ${projectData.dataBase[index].type === filterSelected ? "btn-selected " : ""}`}>
-                <FontAwesomeIcon icon={icon} size="2x" style={{ marginRight: ".5rem" }} /> {projectData.dataBase[index].type}</button >
+                <FontAwesomeIcon icon={getIcon(item.icon)} size="2x" style={{ marginRight: ".5rem" }} /> {projectData.dataBase[index].type}</button >
         </div>
     })
 
