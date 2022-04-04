@@ -100,7 +100,6 @@ function Projects() {
             <p className="section__subtitle section__subtitle--work">A selection of my range of work</p>
             <div className="portfolio-container">
 
-                <h3>Languages</h3>
                 <div className="btn-container">
                     <button key={0} id={0} onClick={() => {
                         setFilter("ALL")
