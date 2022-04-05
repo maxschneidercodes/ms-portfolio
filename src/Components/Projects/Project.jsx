@@ -42,6 +42,24 @@ function Projects() {
     function getIcon(iconString) {
         let icon
         switch (iconString) {
+            case "C#":
+                icon = faCode
+                break;
+            case "TypeScript":
+                icon = faCode
+                break;
+            case "Firebase":
+                icon = faDatabase
+                break;
+            case "Contentful":
+                icon = faDatabase
+                break;
+            case "MongoDB":
+                icon = faDatabase
+                break;
+            case "ALL":
+                icon = faListAlt
+                break;
             case "Swift":
                 icon = faSwift
                 break;
@@ -53,6 +71,9 @@ function Projects() {
                 break;
             case "Node.js":
                 icon = faNode
+                break;
+            case "Unity":
+                icon = faUnity
                 break;
             default:
                 icon = null
@@ -103,7 +124,8 @@ function Projects() {
                 <div className="btn-container">
                     <button key={0} id={0} onClick={() => {
                         setFilter("ALL")
-                    }} className={`btn2 ${filterSelected.includes("ALL") ? "btn-selected " : ""}`}>ALL</button>
+                    }} className={`btn2 ${filterSelected.includes("ALL") ? "btn-selected " : ""}`}>
+                        <FontAwesomeIcon icon={getIcon("ALL")} size="2x" style={{ marginRight: ".5rem" }} />ALL</button>
                     {programmingLanguagesButtons}
                     {frameworkButton}
                     {databaseButton}
